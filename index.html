@@ -62,21 +62,27 @@
     
 <body>
 
-<nav class="navbar navbar-expand-md navbar-dark fixed-top fa fa-bars" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
     
-    <div class="navbar-collapse collapse fixed-top">
+    <div class="navbar-collapse fixed-top" id="myNavbar">
          <div class="modal-container">
         <input id="modal-toggle" type="checkbox" class="fa fa-question-circle" height="1vh" width="1vw">
             <div class="modal-backdrop">
                 <div class="modal-content">
                     <label class="modal-close" for="modal-toggle">x</label>
-                        <h2><b>Website Navigation</b></h2>
-                          <p><b>The Story:</b> This map contains data pertaining to and discussing the current humanitarian crisis that is taking place in Yemen.</p><p><b>Search Selection:</b> At the top of the map there are several selections spanning food insecurity levels, livelihood, conflict types, and faction locations that can be used to search for information</p><p><b>Layer Selection:</b>The righthand side is a selection of layers that can be turned on and off at will. *Note: In order for the "Search Selection" to be used the layer must be turned on.</p><p><b>Multiple Layers:</b> When selecting more than one layer the last one selected will be placed as the top most feature (only that legend will show). *Note: When loading Conflict data make certain it is the only layer selected.</p><p><b>Story/History:</b> Information pertaining to Yemen's Humanitarian Crisis is located on the far left of the screen. Click on the downward facing arrows to read the different sections.</p><p><b>Helping Yemen:</b> An assortment of tabs are located at the top of the screen each highlighting important steps that we all can take in helping yemen from donating money, donating time, and even just being informed.</p>
+                    <h2 style="font-size:calc(9px + 1vw);"><b>Further Details & Information</b></h2>
+                    <p style="font-size:calc(4px + 1vw);"><b><a href="https://lostabroad.github.io/YemenSplit/">Split Screen View: Recommended For Computers</a></b><br><u>Food Insecurity:</u> Shows forward-looking analysis representing the most likely food security for the near term (approximately 6 months). Knowing which regions are more likely to have food insecuirty allows organizations to better prepare in those areas. The issues associated with fodd insecurity include malnutrition, death, an increase in civilian conflicts, and more. 
+                    <br><u>Livelihood Zone:</u> Maps out the most recent information for the most common type of income within a region. By knowing the primary livelihoods within each area one can make certain speculations as to why certain areas are prone to more conflicts. For example, areas with more air strikes are likely to have lower crop yields from being felled or machinerary being ruined. Where as areas with cattle are less likely to be impacted since the cattle can continue grazing.
+                    <br><u>Faction:</u> This layer allows the user to get a better understanding of the different factions that are currently located within Yemen and why it has become so difficult for humanitarian aid (such as Doctors Without Borders) to be present in the region. It is also meant to allow individuals to have a better understanding of why certain conflicts are more heavily centered in specific areas.
+                    <br><u>Population:</u> This layer is meant to help showcase the role population has to play in the level of food insecurity and the types of conflicts within Yemen. Without understanding the different areas of higher and lower population sizes a full picture of the crisis currently taking place from disease and famine can't be painted. In the future a slide bar that allows for a larger variety of population sizes to be looked at will be included.
+                    <br><u>Conflicts:</u>This layer is meant to allow for an easier way to visually see how each conflict may be impacting Yemen on its road to recovery and used in conjuction with all the previous layers. The other layers don't tell a complete story without realizing just how many different conflicts are taking place.
+                    <br><u>Boundaries:</u> County, State, and County boundaries have been included to serve as a reference for spatial locations.
+                    <br><u>Data:</u> For those that are interested here is the classification data and the process used by the organization- <a href="https://fews.net/our-work/our-work/scenario-development">FEWS Scenario Development, </a> <a href="https://fews.net/IPC">Integrated Phase Classification, </a> <a href="https://fews.net/sectors-topics/sectors/livelihoods">and Household Economy Analysis. </a></p>
                     <label class="modal-close button" for="modal-toggle">Close</label>
                 </div>
             </div>
     </div>
-        <div id="open" class="dropdown">
+                <div id="open" class="dropdown">
                     <button type="button" class="openbtn" onclick="openNav()"><i class="fa fa-map-o"></i></button>
         </div>
         <div class="dropdown">
@@ -122,7 +128,7 @@
             </div>
         </div>
          <div class="dropdown">
-            <button class="dropbtn">Data/Information</button>
+            <button class="dropbtn1">Data/Information</button>
             <div class="dropdown-content">
                 <a class="dropdown-item" href="https://www.yemendataproject.org/">Yemen Data Project</a>
                 <a class="dropdown-item" href="https://data.humdata.org/group/yem">Humanitarian Data Exchange</a>
@@ -131,30 +137,12 @@
             </div>
         </div>
         <div class="dropdown">
-            <button class="dropbtn">Website Creator</button>
+            <button class="dropbtn1">Website Creator</button>
             <div class="dropdown-content">
                 <a class="dropdown-item" href="https://lostabroad.github.io/jasonheutmaker/#portfolio">Personal Website</a>
                 <a class="dropdown-item" href="https://lostabroad.github.io/jasonheutmaker/#resume">Resume</a>
                 <a class="dropdown-item" href="https://lostabroad.github.io/jasonheutmaker/#about">About Me</a>
             </div>
-        </div>
-        
-        <div class="dropdown">
-<!--
-                <form  class= "search-bar1" method="get" action="http://www.google.com/search">
-
-                    <div class= "search-bar2">
-                    <table class= "search-bar3">
-                    <tr><td>
-                    <input class="search-bar5" type="text"   name="q" size="20"
-                     maxlength="255" value="" />
-                    <input class="search-bar4" type="submit" value="Search" /></td></tr>
-                    <tr><td align="center" style="font-size:50%">
-                    </td></tr></table>
-                    </div>
-
-                </form>
--->
         </div>
         </div>
     </nav>
@@ -164,7 +152,7 @@
             <div class="sidebar-wrapper" >
                 <div class="card card-default" id="features">
                     <div class="card-header" >
-                        <h3 class="card-title"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>Yemen's Crisis: An Overview
+                        <h3 class="card-title">Yemen's Crisis: An Overview
                             <button type="button" class="btn btn-xs btn-default float-right" data-toggle="collapse" href="#filterSection" aria-expanded="false" aria-control="filterSection" id="sidebar-open-filter"><i onclick="myFunction(this)" class="fa fa-chevron-down" ></i></button>
                         <script>
                         function myFunction(x) {
@@ -342,20 +330,7 @@
                              <button type="button" class="btn " data-toggle="collapse" href="#choleraConcern" aria-expanded="false" aria-control="cholderConcern" id="sidebar-open-filter"><i class="fa fa-eye-slash"></i></button>
                         </div>
                     </div>
-                </div>
-                <script>
-                    
-                    function openNav() {
-                      document.getElementById("sidebar").style.width = "36vw";
-                      document.getElementById("open").style.marginLeft = "0x";
-                    }
-
-                    function closeNav() {
-                      document.getElementById("sidebar").style.width = "0";
-                      document.getElementById("open").style.marginLeft= "0";
-                    }
-                </script>
-                
+                </div>                
                 <p><br><br></p>
                 <figure><img src="yemen_12.jpg" alt="In Need" style="max-width:32%;max-height:39%;">
                 </figure>
@@ -451,6 +426,19 @@
       </label>
     </div>
 </div>
+
+<script>
+    
+function openNav() {
+  var x = document.getElementById("sidebar");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+    
+</script>
 <!--    my js script-->
 <script type="text/javascript" src="js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
